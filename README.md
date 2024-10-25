@@ -35,3 +35,30 @@ Logo após foi feito uma remoção de uma coluna desnecessária para o nosso mod
 df4.drop(['Unnamed: 32'], axis = 1)
 df4.dropna
 ```
+
+## Seleção de previsores e alvo do modelo
+
+```
+previsores = df4.drop(['id', 'diagnosis', 'Unnamed: 32'], axis=1).values #Seleciona todas variáveis menos 'id' e 'diagnosis'
+alvos = df4['diagnosis'].values #Seleciona apenas 'diagnosis' como alvo
+
+```
+
+## Escalonamento para melhorar precisão em certos algoritmos
+
+```
+scaler = StandardScaler()
+previsores_esc = scaler.fit_transform(previsores)
+
+```
+
+Base de treino e teste utilizando os previsores e os alvos
+
+```
+x_treino, x_teste, y_treino, y_teste = train_test_split(previsores, alvos, test_size = 0.3, random_state = 0)
+```
+
+Dito isto, o objetivo deste projeto não é entrar em testes de distribuição normal para a base de dados, outliers e nenhum outro teste estatístico. 
+Isso será foco em outro projeto, nesse iremos verificar outros pontos.
+
+# Naive Bayes
