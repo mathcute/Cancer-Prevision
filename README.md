@@ -76,6 +76,7 @@ print('Acurácia: %.2f%%' % (accuracy_score(y_teste, previsoes)*100))
 ```
 
 O resultado é: 92.40%
+
 Classification report:
 
 ![image](https://github.com/user-attachments/assets/53e237ea-919b-40d1-aa09-b84a2b31ec15)
