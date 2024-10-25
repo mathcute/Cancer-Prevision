@@ -62,3 +62,20 @@ Dito isto, o objetivo deste projeto não é entrar em testes de distribuição n
 Isso será foco em outro projeto, nesse iremos verificar outros pontos.
 
 # Naive Bayes
+
+```
+naive = GaussianNB()
+naive.fit(x_treino, y_treino)
+```
+
+Métricas do algoritmo
+
+```
+accuracy_score(y_teste, previsoes)
+print('Acurácia: %.2f%%' % (accuracy_score(y_teste, previsoes)*100))
+```
+
+O resultado é: 92.40%
+Classification report:
+
+![image](https://github.com/user-attachments/assets/53e237ea-919b-40d1-aa09-b84a2b31ec15)
