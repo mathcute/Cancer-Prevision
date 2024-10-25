@@ -109,7 +109,7 @@ Resultado do teste é: 96.48%
 
 Classification report:
 
-![image](https://github.com/user-attachments/assets/c32f6f5d-216d-43f5-afb7-d321de83c79e)
+![image](https://github.com/user-attachments/assets/a03063c6-8377-47b2-8bb3-c22c89388bdd)
 
 Validação Cruzada
 
