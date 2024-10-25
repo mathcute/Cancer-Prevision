@@ -1,6 +1,7 @@
 # Cancer-Prevision
 
 O objetivo desse projeto prático é utilizar vários modelos de classificação para detectar se uma pessoa tem câncer ou não.
+*Tecnologias e bibliotecas utilizadas*: Python, Pandas, NumPy, Matplotlib, SKLEARN, XGBoost, LightGBM e CatBoost.
 Modelos utilizados: Naive Bayes, SVM, Regressão Logística, KNN, Árvores de Decisão, Random Forest, XGBoost, LighGBM e CatBoost.
 
 ## Base de dados inicial
