@@ -12,4 +12,4 @@
 ## Tratamento dos dados
 
 Primeiro tratamento na base de dados é para remover tudo que não for númerico, para fazer isso usamos essa solução:
-"""df3.replace({'[^0-9]': ''}, regex = True)
+```df3.replace({'[^0-9]': ''}, regex = True)
