@@ -71,12 +71,55 @@ naive.fit(x_treino, y_treino)
 Métricas do algoritmo
 
 ```
-accuracy_score(y_teste, previsoes)
-print('Acurácia: %.2f%%' % (accuracy_score(y_teste, previsoes)*100))
+accuracy_score(y_treino, previsoes_treino)
+print('Acurácia: %.2f%%' % (accuracy_score(y_treino, previsoes_treino)*100))
 ```
 
-O resultado é: 92.40%
+O resultado do teste é: 94.22%
 
 Classification report:
 
 ![image](https://github.com/user-attachments/assets/53e237ea-919b-40d1-aa09-b84a2b31ec15)
+
+Validação Cruzada
+
+```
+model = GaussianNB()
+results = cross_val_score(model, previsores, alvos, cv = kfold)
+
+print('Acurácia: %.2f%%' % (results.mean() * 100.0))
+```
+
+Resultado: 93.82%
+
+# SVM
+
+```
+svm = SVC(kernel = 'linear', random_state = 1, C = 2)
+svm.fit(x_treino, y_treino)
+```
+
+Métricas do algoritmo
+
+```
+previsores_treino = svm.predict(x_treino)
+accuracy_score(y_treino, previsores_treino)
+```
+Resultado do teste é: 96.48%
+
+Classification report:
+
+![image](https://github.com/user-attachments/assets/c32f6f5d-216d-43f5-afb7-d321de83c79e)
+
+Validação Cruzada
+
+```
+kfold = KFold(n_splits = 30, shuffle = True, random_state = 5)
+model = SVC(kernel = 'linear', random_state = 1, C = 2)
+results = cross_val_score(model, previsores, alvos, cv = kfold)
+print('Acurácia: %.2f%%' % (results.mean() * 100))
+```
+
+Resultado: 95.06%
+
+# Regressão Logística
