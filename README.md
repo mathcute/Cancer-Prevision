@@ -13,11 +13,12 @@
 
 Primeiro tratamento na base de dados é para remover tudo que não for númerico, para fazer isso usamos essa solução:
 
-```df3.replace({'[^0-9]': ''}, regex = True)```
+``` df3.replace({'[^0-9]': ''}, regex = True) ```
 
 Depois uma função para ajustar os formatos das variáveis númericas, para todas ficarem no mesmo padrão:
 
-```def ajustar_formato(x):
+```
+def ajustar_formato(x):
 
     if isinstance(x, str) and '.' not in x:
 
