@@ -123,3 +123,36 @@ print('Acurácia: %.2f%%' % (results.mean() * 100))
 Resultado: 95.06%
 
 # Regressão Logística
+
+```
+lr = LogisticRegression(random_state = 1, max_iter = 600,
+                        tol = 0.0001, penalty = 'l2', C = 1, solver = 'lbfgs')
+lr.fit(x_treino, y_treino)
+```
+
+Métricas do algoritmo
+
+```
+previsores_treino = lr.predict(x_treino)
+accuracy_score(y_treino, previsores_treino)
+```
+
+Resultado do teste é: 95.97
+
+Classification report:
+
+![image](https://github.com/user-attachments/assets/63f47c76-67a1-49bd-a486-46b39dc06971)
+
+Validação Cruzada
+
+```
+kfold = KFold(n_splits = 30, shuffle = True, random_state = 5)
+model = LogisticRegression(random_state = 1, max_iter = 600,
+                        tol = 0.0001, penalty = 'l2', C = 1, solver = 'lbfgs')
+result = cross_val_score(model, previsores, alvos, cv = kfold)
+print("Acurácia: %.2f%%" % (result.mean() * 100.0))
+```
+
+Resultado: 95.06%
+
+# KNN
