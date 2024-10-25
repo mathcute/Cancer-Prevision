@@ -28,3 +28,10 @@ def ajustar_formato(x):
 
         return x
 ```
+
+Logo após foi feito uma remoção de uma coluna desnecessária para o nosso modelo e remoção de NaN: 
+
+```
+df4.drop(['Unnamed: 32'], axis = 1)
+df4.dropna
+```
