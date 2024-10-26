@@ -381,4 +381,5 @@ Resultado: 96.11%
 # Conclusões Finais
 
 Algoritmo com melhor acurácia: XGBoost com 98.24%
+
 Algoritmo com maior pontuação na Validação Cruzada: CatBoost com 96.11%
